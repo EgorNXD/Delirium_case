@@ -10,7 +10,7 @@ text = input()
 text = text.split()
 
 
-def appender(x,y):
+def appender(x, y):
     if y not in x:
         x.append(y)
 
@@ -43,6 +43,6 @@ while numbr_sentns < nummer:
         word1 = random.choice(list(dictnri.keys()))
         strng += " " + word1
     if word1[-1] == ".":
-        numbr_sentns +=
+        numbr_sentns += 1
 
 print(strng)
