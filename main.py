@@ -5,10 +5,6 @@ strng = ""
 dictnri = {}
 j = 0
 
-nummer = int(input())
-text = input()
-text = text.split()
-
 
 def appender(x, y):
     if y not in x:
@@ -17,6 +13,11 @@ def appender(x, y):
 
 def newmaker(x):
     dictnri[x] = []
+
+
+nummer = int(input())
+text = input()
+text = text.split()
 
 
 for word in text:
