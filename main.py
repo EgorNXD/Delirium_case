@@ -6,11 +6,6 @@ dictnri = {}
 j = 0
 
 
-def appender(x, y):
-    if y not in x:
-        x.append(y)
-
-
 def newmaker(x):
     dictnri[x] = []
 
@@ -21,11 +16,10 @@ text = text.split()
 
 
 for word in text:
-    if word in dictnri:
-        appender(dictnri[word], text[j+1])
-    else:
+    if word not in dictnri:
         newmaker(word)
-        appender(dictnri[word], text[j+1])
+    if text[j+1] not in dictnri[word]:
+        dictnri[word].append(text[j+1])
     j += 1
     if j+1 == len(text):
         newmaker(text[j])
