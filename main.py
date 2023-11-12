@@ -29,7 +29,7 @@ word1 = random.choice(list(dictnri.keys()))
 while word1[0].islower():
     word1 = random.choice(list(dictnri.keys()))
 strng += word1
-if word1[-1] == "." or "!" or "?":
+if word1[-1] == "." or word1[-1] == "!" or word1[-1] == "?":
     numbr_sentns += 1
 while numbr_sentns < nummer:
     if len(dictnri[word1]) > 0:
@@ -42,7 +42,7 @@ while numbr_sentns < nummer:
             word1 = random.choice(list(dictnri.keys()))
         strng += " " + word1
 
-    if word1[-1] == "." or "!" or "?":
+    if word1[-1] == "." or word1[-1] == "!" or word1[-1] == "?":
         numbr_sentns += 1
 
 print(strng)
