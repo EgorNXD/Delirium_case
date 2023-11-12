@@ -1,3 +1,7 @@
+'''
+Alexey Polevik = 40
+Egor Nechaev = 80
+'''
 import random
 
 numbr_sentns = 0
