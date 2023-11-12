@@ -10,7 +10,7 @@ with open('input.txt', 'r', encoding='utf-8') as inputfile:
     line = inputfile.readline()
     nummer = int(line.strip())
     for line in inputfile:
-        text += line.strip()
+        text += " " + line.strip()
 
 def newmaker(x):
     dictnri[x] = []
@@ -35,13 +35,14 @@ while numbr_sentns < nummer:
     if len(dictnri[word1]) > 0:
         word2 = random.choice(dictnri[word1])
         strng += " " + word2
+        print(strng)
         word1 = word2
     else:
         word1 = random.choice(list(dictnri.keys()))
         while word1[0].islower():
             word1 = random.choice(list(dictnri.keys()))
         strng += " " + word1
-
+        print(strng)
     if word1[-1] == "." or word1[-1] == "!" or word1[-1] == "?":
         numbr_sentns += 1
 
