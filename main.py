@@ -26,8 +26,10 @@ for word in text:
         break
 
 word1 = random.choice(list(dictnri.keys()))
+while word1[0].islower():
+    word1 = random.choice(list(dictnri.keys()))
 strng += word1
-if word1[-1] == ".":
+if word1[-1] == "." or "!" or "?":
     numbr_sentns += 1
 while numbr_sentns < nummer:
     if len(dictnri[word1]) > 0:
@@ -36,8 +38,11 @@ while numbr_sentns < nummer:
         word1 = word2
     else:
         word1 = random.choice(list(dictnri.keys()))
+        while word1[0].islower():
+            word1 = random.choice(list(dictnri.keys()))
         strng += " " + word1
-    if word1[-1] == ".":
+
+    if word1[-1] == "." or "!" or "?":
         numbr_sentns += 1
 
 print(strng)
