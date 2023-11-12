@@ -4,16 +4,16 @@ numbr_sentns = 0
 strng = ""
 dictnri = {}
 j = 0
+text = ""
 
+with open('input.txt', 'r', encoding='utf-8') as inputfile:
+    line = inputfile.readline()
+    nummer = int(line.strip())
+    for line in inputfile:
+        text += line.strip()
 
 def newmaker(x):
     dictnri[x] = []
-
-
-nummer = int(input())
-text = input()
-text = text.split()
-
 
 for word in text:
     if word not in dictnri:
@@ -45,4 +45,5 @@ while numbr_sentns < nummer:
     if word1[-1] == "." or word1[-1] == "!" or word1[-1] == "?":
         numbr_sentns += 1
 
-print(strng)
+with open("output.txt", "w", encoding='utf-8') as fileoutput:
+    fileoutput.write(strng)
